@@ -97,7 +97,7 @@ public class WeatherActivity extends AppCompatActivity {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences
                 (this);
         String weatherString = prefs.getString("weather", null);
-        if (weatherString != null && mWeatherId == getIntent().getStringExtra("weather_id")) {
+        if (weatherString != null) {
 //        if (weatherString != null ) {
             // 有缓存时直接解析天气数据
             Weather weather = Utility.handleWeatherResponse(weatherString);
